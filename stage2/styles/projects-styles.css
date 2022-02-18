@@ -1,6 +1,7 @@
 .nav-wrapper{
 	background-color: #fff;
 	padding: 8px 0;
+	border-bottom: 1px solid #ebf2f2;
 }
 
 .nav{
@@ -9,25 +10,84 @@
 	align-items: center;
 	margin: 0 auto;
 	max-width: 1140px;
-	border-bottom: 1px solid #ebf2f2;
 	padding: 0 20px;
 }
 
-.nav-items{
+.nav-list{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 705px;
-	margin: 16px 0;
+	margin-right: 48px;
 }
 
-.nav-items span, .nav-items a{
-	font-weight: 700;
-	font-size: 16px;
-	font-family: Open Sans, sans-serif;
+.nav-item{
+	position: relative;
+	padding: 16px 0;	
+	cursor: default; 
 }
-.nav-items li{
-	margin-bottom: 3px;
+
+.nav-item:hover ul, .nav-item:focus ul{
+	opacity: 1;
+	visibility: visible;
+	transition: all 0s linear;
+}
+
+.dropdown{
+	position: absolute;
+	top: calc(100% + 8px);
+	left: -20px;
+	background: #fff;
+	box-shadow: 0 5px 30px 0 rgba(108,135,135,.5);
+	width: 230px;
+	border-radius: 5px;	
+	padding: 37px 30px;
+	box-sizing: border-box;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.2s ease-out;
+	white-space: nowrap;
+}
+
+.dropdown li{
+	margin-bottom: 10px;
+	font-family: Open Sans, sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.dropdown li:active, .dropdown li:hover, .dropdown li:focus{
+	color: #6db33f;
+}
+
+.nav-link:hover, .nav-link:focus{
+	color: #6db33f;
+	cursor: pointer;
+}
+
+.dropdown li>a{	
+	cursor: pointer; 
+}
+
+.a-wrapper{
+	margin-bottom: 30px;	
+	display: block;
+	color: #086dc3;
+}
+
+.small-font{
+	font-size: 0.8125rem;
+}
+
+.external-link-icon{
+	width: 12px;
+	height: 12px;
+}
+
+.nav-list span, .nav-item{
+	font-weight: 700;
+	font-size: 0.9375rem;
+	font-family: Open Sans, sans-serif;
 }
 
 ul{
@@ -139,3 +199,5 @@ h1, h3, p, span{
 a{
 	text-decoration: none;
 }
+
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,43 +9,86 @@
 	<link rel="stylesheet" href="./styles/projects-styles.css">
 	<link rel="stylesheet" href="./styles/main.css">
 </head>
+
 <body>
 	<header>
 		<nav class="nav-wrapper">
 			<div class="nav">
 				<a href="/">
-					<img class="spring-logo" src="./assets/images/spring-logo.svg" alt=""/>
+					<img class="spring-logo" src="./assets/images/spring-logo.svg" alt="" />
 				</a>
-				<ul class="nav-items">
-					<li>
+				<ul class="nav-list">
+					<li class="nav-item">
 						<div>
 							<span>Why Spring</span>
 							<div class="nav-arrow"></div>
 						</div>
+						<ul class="dropdown">
+							<li><a>Overview</a></li>
+							<li><a>Microservices</a></li>
+							<li><a>Reactive</a></li>
+							<li><a>Event Driven</a></li>
+							<li><a>Cloud</a></li>
+							<li><a>Web Application</a></li>
+							<li><a>Serverless</a></li>
+							<li><a>Batch</a></li>
+						</ul>
 					</li>
-					<li>
+					<li class="nav-item">
 						<div>
 							<span>Learn</span>
 							<div class="nav-arrow"></div>
 						</div>
+						<ul class="dropdown">
+							<li><a>Overview</a></li>
+							<li><a>Quickstart</a></li>
+							<li><a>Guides</a></li>
+							<li><a>Blog</a></li>
+						</ul>
 					</li>
-					<li>
+					<li class="nav-item">
 						<div>
 							<span>Projects</span>
 							<div class="nav-arrow"></div>
 						</div>
+						<ul class="dropdown">
+							<li><a>Spring Boot</a></li>
+							<li><a>Spring Framework</a></li>
+							<li><a>Spring Cloud</a></li>
+							<li><a>Spring Cloud Data Flow</a></li>
+							<li><a>Spring Data</a></li>
+							<li><a>Spring Integration</a></li>
+							<li><a>Spring Batch</a></li>
+							<li><a>Spring Security</a></li>
+							<li><a class="a-wrapper">View all projects</a></li>
+							<li><a class="small-font">DEVELOPMENT TOOLS</a></li>
+							<li><a>Spring Tools 4</a></li>
+							<li><a>Spring Initializr</a>
+							<svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+								<polyline points="15 10.94 15 15 1 15 1 1 5.06 1" fill="none" stroke="currentColor" stroke-miterlimit="10"
+									stroke-width="2"></polyline>
+								<polyline points="8.93 1 15 1 15 7.07" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+								</polyline>
+								<line x1="15" y1="1" x2="8" y2="8" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></line>
+							</svg></li>
+						</ul>
 					</li>
-					<li>
-						<a>Training</a>
+					<li class="nav-item">
+						<a class="nav-link">Training</a>
 					</li>
-					<li>
-						<a>Support</a>
+					<li class="nav-item">
+						<a class="nav-link">Support</a>
 					</li>
-					<li >
+					<li class="nav-item">
 						<div>
 							<span>Community</span>
 							<div class="nav-arrow"></div>
 						</div>
+						<ul class="dropdown">
+							<li><a>Overview</a></li>
+							<li><a>Events</a></li>
+							<li><a>Team</a></li>
+						</ul>
 					</li>
 				</ul>
 		</nav>
@@ -52,57 +96,66 @@
 	<div>
 		<div class="projects-info">
 			<h1>Projects</h1>
-			<p>From configuration to security, web apps to big data—whatever the infrastructure needs of your application may be, there
-			is a Spring Project to help you build it. Start small and use just what you need—Spring is modular by design.</p>
+			<p>From configuration to security, web apps to big data—whatever the infrastructure needs of your
+				application may be, there
+				is a Spring Project to help you build it. Start small and use just what you need—Spring is modular by
+				design.</p>
 		</div>
 	</div>
 	<div class="projects-panel">
 		<div class="flex-panel">
 			<section class="flex-items">
 				<a class="flex-item">
-					<img class="project-icon" src="./assets/images/spring-boot.svg" alt=""/>
+					<img class="project-icon" src="./assets/images/spring-boot.svg" alt="" />
 					<div class="project-text">
 						<h3>Spring Boot</h3>
-						<p>Takes an opinionated view of building Spring applications and gets you up and running as quickly as possible.</p>
+						<p>Takes an opinionated view of building Spring applications and gets you up and running as
+							quickly as possible.</p>
 					</div>
 				</a>
 				<a class="flex-item">
 					<img class="project-icon" src="./assets/images/spring-framework.svg" alt="" />
 					<div class="project-text">
 						<h3>Spring Framework</h3>
-						<p>Provides core support for dependency injection, transaction management, web apps, data access, messaging, and more.</p>						
+						<p>Provides core support for dependency injection, transaction management, web apps, data
+							access, messaging, and more.</p>
 					</div>
 				</a>
 				<a class="flex-item">
 					<img class="project-icon" src="./assets/images/spring-data.svg" alt="" />
 					<div class="project-text">
 						<h3>Spring Data</h3>
-						<p>Provides a consistent approach to data access – relational, non-relational, map-reduce, and beyond.</p>
+						<p>Provides a consistent approach to data access – relational, non-relational, map-reduce, and
+							beyond.</p>
 					</div>
 				</a>
 				<a class="flex-item">
 					<img class="project-icon" src="./assets/images/spring-cloud.svg" alt="" />
 					<div class="project-text">
 						<h3>Spring Cloud</h3>
-						<p>Provides a set of tools for common patterns in distributed systems. Useful for building and deploying microservices.</p>
+						<p>Provides a set of tools for common patterns in distributed systems. Useful for building and
+							deploying microservices.</p>
 					</div>
 				</a>
 				<a class="flex-item">
 					<img class="project-icon" src="./assets/images/spring-data-flow.svg" alt="" />
 					<div class="project-text">
 						<h3>Spring Cloud Data Flow</h3>
-						<p>Provides an orchestration service for composable data microservice applications on modern runtimes.</p>
+						<p>Provides an orchestration service for composable data microservice applications on modern
+							runtimes.</p>
 					</div>
 				</a>
 				<a class="flex-item">
 					<img class="project-icon" src="./assets/images/spring-security.svg" alt="" />
 					<div class="project-text">
 						<h3>Spring Security</h3>
-						<p>Protects your application with comprehensive and extensible authentication and authorization support.</p>
+						<p>Protects your application with comprehensive and extensible authentication and authorization
+							support.</p>
 					</div>
 				</a>
 			</section>
 		</div>
 	</div>
 </body>
+
 </html>
