@@ -1,0 +1,79 @@
+.nav-wrapper{
+	background-color: #fff;
+	padding: 8px 0;
+}
+
+.nav{
+	display: flex;
+	justify-content: space-between;	
+	align-items: center;
+	margin: 0 auto;
+	max-width: 1140px;
+	border-bottom: 1px solid #ebf2f2;
+}
+
+.nav-items{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 63%;
+	margin: 16px 0;
+}
+
+.nav-items span, .nav-items a{
+	font-weight: 700;
+	font-size: 16px;
+	font-family: Open Sans, sans-serif;
+}
+.nav-items li{
+	margin-bottom: 3px;
+}
+
+ul{
+	list-style: none;
+}
+
+.nav-arrow{
+	border: #191e1e solid;
+	border-width: 0 1px 1px 0;
+	display: inline-block;
+	padding: 3px;
+	margin-left: 5px;
+	transform: rotate(45deg) translateY(-6px);
+}
+
+.spring-logo{
+	height: 48px;
+	display: block;
+}
+
+.projects-info{	
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 80px 0;
+}
+
+h1{
+	font-size: 60px;
+	font-family: Metropolis, sans-serif;
+	line-height: 60px;
+	font-weight: 500;
+}
+
+.projects-info p{
+	font-family: Metropolis, sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 40px;
+	max-width: 1040px;
+	margin: 24px 0 80px;
+}
+
+h1, p, span{
+	color: #191e1e;
+	margin-top: 0.4em;
+}
+
+a{
+	text-decoration: none;
+}
