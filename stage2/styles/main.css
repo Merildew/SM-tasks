@@ -29,7 +29,14 @@
        url('../assets/fonts/open-sans-v27-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../assets/fonts/open-sans-v27-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
-
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../assets/fonts/Metropolis-Light.ttf');
+  src: local(''),
+       url('../assets/fonts/Metropolis-Light.ttf') format('truetype');
+}
 @font-face {
   font-family: 'Metropolis';
   font-style: normal;

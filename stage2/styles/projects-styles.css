@@ -10,13 +10,14 @@
 	margin: 0 auto;
 	max-width: 1140px;
 	border-bottom: 1px solid #ebf2f2;
+	padding: 0 20px;
 }
 
 .nav-items{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 63%;
+	width: 705px;
 	margin: 16px 0;
 }
 
@@ -50,7 +51,7 @@ ul{
 .projects-info{	
 	max-width: 1140px;
 	margin: 0 auto;
-	padding: 80px 0;
+	padding-top: 80px;
 }
 
 h1{
@@ -58,6 +59,7 @@ h1{
 	font-family: Metropolis, sans-serif;
 	line-height: 60px;
 	font-weight: 500;
+	margin: 24px 0 10px;
 }
 
 .projects-info p{
@@ -67,11 +69,71 @@ h1{
 	line-height: 40px;
 	max-width: 1040px;
 	margin: 24px 0 80px;
+	color: #333;
 }
 
-h1, p, span{
+.projects-panel{
+	background-color: #ebf2f2;
+	padding: 50px 0;
+}
+
+.flex-panel{
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.flex-items{
+	display: flex;
+	justify-content: space-between;
+	width: 82%;
+	margin-right: 0;
+	margin-left: auto;
+	flex-wrap: wrap;
+	border: 1px solid #d9e9e9;
+	border-radius: 5px;
+}
+
+.flex-item{
+	display: flex;
+	justify-content: space-between;
+	width: 48.5%;
+	padding: 40px 30px;
+	box-sizing: border-box;
+	background-color: #fff;
+	margin-bottom: 25px;
+}
+
+.flex-item:hover{
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px 0 rgb(108 135 135 / 20%);
+}
+
+.flex-item p{
+	line-height: 1.7;
+	color: #333;
+	font-family: Open Sans, sans-serif;
+	margin: 16px 0;
+}
+
+.project-icon{
+	height: 60px;
+	max-width: 18.5%;
+	align-self: flex-start;
+}
+
+.project-text{
+	width: 76.5%;
+}
+
+h3{
+	font-size: 1.5em;
+	font-family: Metropolis, sans-serif;
+	font-weight: 500;
+}
+
+
+h1, h3, p, span{
 	color: #191e1e;
-	margin-top: 0.4em;
 }
 
 a{
