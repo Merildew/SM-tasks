@@ -3,10 +3,10 @@
 	margin: 0;
 }
 
-html{
-	
+body{
 	overflow-x: hidden;
 }
+
 /* open-sans-regular - latin */
 @font-face {
   font-family: 'Open Sans';
