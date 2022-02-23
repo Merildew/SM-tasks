@@ -160,9 +160,7 @@ h1{
 	width: 82%;
 	margin-right: 0;
 	margin-left: auto;
-	flex-wrap: wrap;
-	border: 1px solid #d9e9e9;
-	border-radius: 5px;
+	flex-wrap: wrap;	
 }
 
 .flex-item{
@@ -173,6 +171,8 @@ h1{
 	box-sizing: border-box;
 	background-color: #fff;
 	margin-bottom: 25px;
+	border: 1px solid #d9e9e9;
+	border-radius: 5px;
 }
 
 .flex-item:hover{
@@ -239,4 +239,19 @@ a{
 	.flex-item{
 		width: 100%;
 	}
+
+	.projects-info p, h3{
+		font-size: 17.5px;
+		line-height: 1.7em;
+	}
+
+	h1{
+		font-size: 3rem;
+		line-height: 1em;
+	}
+
+	.flex-item p{
+		font-size: 14px;
+	}
+
 }
