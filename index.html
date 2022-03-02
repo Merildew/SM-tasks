@@ -11,6 +11,7 @@
 </head>
 
 <body>
+	<div class="wrapper">
 	<header>
 		<nav class="nav-wrapper">
 			<div class="nav">
@@ -99,7 +100,7 @@
 			</div>
 		</nav>		
 	</header>
-	<div>
+	<div>		
 		<div class="projects-info">
 			<h1>Projects</h1>
 			<p>From configuration to security, web apps to big data—whatever the infrastructure needs of your
@@ -109,59 +110,18 @@
 		</div>
 	</div>
 	<div class="projects-panel">
+		<div class="search-form-container">
+			<form class="search-form" id="search" method="post">
+				<div class="search-icon">
+					<input id="searchInput" class="search-input" name="projectResult" placeholder="Find projects" type="text">
+				</div>
+			</form>
+		</div>
 		<div class="flex-panel">
-			<section class="flex-items">
-				<a class="flex-item">
-					<img class="project-icon" src="./src/assets/images/spring-boot.svg" alt="" />
-					<div class="project-text">
-						<h3>Spring Boot</h3>
-						<p>Takes an opinionated view of building Spring applications and gets you up and running as
-							quickly as possible.</p>
-					</div>
-				</a>
-				<a class="flex-item">
-					<img class="project-icon" src="./src/assets/images/spring-framework.svg" alt="" />
-					<div class="project-text">
-						<h3>Spring Framework</h3>
-						<p>Provides core support for dependency injection, transaction management, web apps, data
-							access, messaging, and more.</p>
-					</div>
-				</a>
-				<a class="flex-item">
-					<img class="project-icon" src="./src/assets/images/spring-data.svg" alt="" />
-					<div class="project-text">
-						<h3>Spring Data</h3>
-						<p>Provides a consistent approach to data access – relational, non-relational, map-reduce, and
-							beyond.</p>
-					</div>
-				</a>
-				<a class="flex-item">
-					<img class="project-icon" src="./src/assets/images/spring-cloud.svg" alt="" />
-					<div class="project-text">
-						<h3>Spring Cloud</h3>
-						<p>Provides a set of tools for common patterns in distributed systems. Useful for building and
-							deploying microservices.</p>
-					</div>
-				</a>
-				<a class="flex-item">
-					<img class="project-icon" src="./src/assets/images/spring-data-flow.svg" alt="" />
-					<div class="project-text">
-						<h3>Spring Cloud Data Flow</h3>
-						<p>Provides an orchestration service for composable data microservice applications on modern
-							runtimes.</p>
-					</div>
-				</a>
-				<a class="flex-item">
-					<img class="project-icon" src="./src/assets/images/spring-security.svg" alt="" />
-					<div class="project-text">
-						<h3>Spring Security</h3>
-						<p>Protects your application with comprehensive and extensible authentication and authorization
-							support.</p>
-					</div>
-				</a>
-			</section>
+			<section id="projectsSection" class="flex-items"></section>
 		</div>
 	</div>
+	</div>
+	<script src="./src/js/srcipt.js"></script>
 </body>
-
 </html>

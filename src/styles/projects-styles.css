@@ -3,6 +3,12 @@
 	padding: 8px 0;
 	border-bottom: 1px solid #ebf2f2;
 }
+.wrapper{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
 
 .nav{
 	display: flex;
@@ -29,6 +35,7 @@
 
 .nav-item:hover ul, .nav-item:focus ul{
 	opacity: 1;
+	z-index: 1;
 	visibility: visible;
 	transition: all 0s linear;
 }
@@ -147,6 +154,46 @@ h1{
 .projects-panel{
 	background-color: #ebf2f2;
 	padding: 50px 20px;
+	flex-grow: 1;
+	flex-basis: 100%;
+}
+
+.search-form-container{
+	max-width: 1140px;
+	margin: 0 auto 25px;
+}
+
+.search-form{
+	width: 82%;
+}
+
+.search-input{
+	width: 100%;
+	color: #333;
+	padding: 0 8px;
+	height: 40px;
+	border: none;
+	box-sizing: border-box;	
+	border-radius: 5px;
+}
+
+.search-input:focus-visible{	
+	outline: none;
+	box-shadow: 0 10px 20px 0 rgb(108 135 135 / 20%);
+}
+
+.search-icon{
+	position: relative;
+}
+.search-icon::before{
+	content: "";
+	background: url("../assets/images/logo.svg") no-repeat;
+	background-size: contain;
+	left: calc(100% - 36px);
+	top: 6px;
+	position: absolute;
+	width: 28px;
+	height: 28px;
 }
 
 .flex-panel{
@@ -187,6 +234,17 @@ h1{
 	margin: 16px 0;
 }
 
+.no-result{
+	width: 100%;
+	color: #333;
+	font-size: 20px;
+	text-align: end;
+	display: block;
+	padding: 10px 8px;
+	text-transform: uppercase;
+	font-family: Open Sans, sans-serif;
+}
+
 .project-icon{
 	height: 60px;
 	max-width: 18.5%;
@@ -220,8 +278,12 @@ a{
 }
 
 @media (max-width: 1000px){
-	.flex-items{
+	.flex-items, .search-form{
 		width: 100%;
+	}
+
+	.projects-panel{
+		padding-top: 25px;
 	}
 }
 
@@ -233,21 +295,37 @@ a{
 	.hamburger{
 		display: block;
 	}
+
+	header{
+		position: fixed;
+		width: 100%;
+		z-index: 2;
+	}
 }
 
 @media (max-width: 800px){
 	.flex-item{
 		width: 100%;
 	}
-
-	.projects-info p, h3{
-		font-size: 17.5px;
-		line-height: 1.7em;
+	
+	.project-icon{
+		height: auto;
+		max-height: 60px;
 	}
 
+	.projects-info p{
+		font-size: 20px;
+		line-height: 1.7em;
+		margin-bottom: 50px;
+	}
+	
 	h1{
 		font-size: 3rem;
 		line-height: 1em;
+	}
+
+	h3{
+		font-size: 1.25rem;
 	}
 
 	.flex-item p{
