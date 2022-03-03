@@ -17,7 +17,9 @@
 	margin: 0 auto;
 	max-width: 1140px;
 	padding: 0 20px;
+	position: relative;
 }
+
 
 .nav-list{
 	display: flex;
@@ -56,14 +58,14 @@
 	white-space: nowrap;
 }
 
-.dropdown li{
+.nav-item li{
 	margin-bottom: 10px;
 	font-family: Open Sans, sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 }
 
-.dropdown li:active, .dropdown li:hover, .dropdown li:focus{
+.dropdown a:active, .dropdown a:hover, .dropdown a:focus{
 	color: #6db33f;
 }
 
@@ -116,8 +118,10 @@ ul{
 }
 
 .hamburger{
+	cursor: pointer;
 	padding: 8px;
 	display: none;
+	z-index: 5;
 }
 
 .burger-bar{
@@ -269,6 +273,10 @@ a{
 	text-decoration: none;
 }
 
+.nav-list-mobile{		
+	transform: translateY(-100%);
+}
+
 /*media queries*/
 
 @media (max-width: 1100px){
@@ -292,6 +300,18 @@ a{
 		display: none;
 	}
 
+	.nav-arrow{
+		border: solid #98afae;
+		border-width: 0 2px 2px 0;
+		padding: 5px;
+		margin-right: 7px;
+		margin-left: 0;
+	}
+
+	#navMobile.display{
+		transform: translateY(-100%);
+	}
+
 	.hamburger{
 		display: block;
 	}
@@ -300,6 +320,24 @@ a{
 		position: fixed;
 		width: 100%;
 		z-index: 2;
+	}
+
+	.nav-list-mobile{		
+		transform: translateY(0);
+	}
+
+	.list-container, .nav-link{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 0;		
+		border-bottom: 1px solid #666;
+	}
+	.list-container{
+		margin-bottom: 15px;
+	}
+	.nav-item{
+		padding: 0;
 	}
 }
 
@@ -332,4 +370,73 @@ a{
 		font-size: 14px;
 	}
 
+}
+
+/*mobile */
+
+.nav-list-mobile{
+	overflow-y: scroll;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top:0;
+	left: 0;
+	background-color: #191e1e;
+	z-index: 3;
+	padding: 40px 60px;
+	transition: transform .35s cubic-bezier(.694,0,.335,1);
+	box-sizing: border-box;
+}
+
+.nav-list-mobile .nav-item span, .nav-list-mobile .nav-item{
+	color: #fff;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.burger-bar-1{
+	transform: rotate(45deg);
+	background-color: #fff;
+	width: 23px;
+	height: 1px;
+	position: relative;
+	bottom: -6px;
+}
+
+.burger-bar-2{
+	transform: rotate(-45deg);
+	background-color: #fff;
+	width: 23px;
+	height: 1px;
+	position: relative;
+	bottom: -2px;
+}
+
+.burger-bar-3{
+	transform: scale(0);
+}
+
+.absolute{
+	position: absolute;
+}
+
+.dropdownMobile{
+	overflow: hidden;
+}
+
+.dropdownMobile a{
+	color: #98afae;
+	font-size: 20px;
+}
+
+.dropdownMobile a:active, .dropdownMobile a:hover, .dropdownMobile a:focus{
+	color: #6db33f;
+}
+
+.dropdownMobile li>a{	
+	cursor: pointer; 
+}
+
+.display{
+	display: none;
 }

@@ -18,85 +18,13 @@
 				<a href="/">
 					<img class="spring-logo" src="./src/assets/images/spring-logo.svg" alt="" />
 				</a>
-				<ul class="nav-list">
-					<li class="nav-item">
-						<div>
-							<span>Why Spring</span>
-							<div class="nav-arrow"></div>
-						</div>
-						<ul class="dropdown">
-							<li><a>Overview</a></li>
-							<li><a>Microservices</a></li>
-							<li><a>Reactive</a></li>
-							<li><a>Event Driven</a></li>
-							<li><a>Cloud</a></li>
-							<li><a>Web Application</a></li>
-							<li><a>Serverless</a></li>
-							<li><a>Batch</a></li>
-						</ul>
-					</li>
-					<li class="nav-item">
-						<div>
-							<span>Learn</span>
-							<div class="nav-arrow"></div>
-						</div>
-						<ul class="dropdown">
-							<li><a>Overview</a></li>
-							<li><a>Quickstart</a></li>
-							<li><a>Guides</a></li>
-							<li><a>Blog</a></li>
-						</ul>
-					</li>
-					<li class="nav-item">
-						<div>
-							<span>Projects</span>
-							<div class="nav-arrow"></div>
-						</div>
-						<ul class="dropdown">
-							<li><a>Spring Boot</a></li>
-							<li><a>Spring Framework</a></li>
-							<li><a>Spring Cloud</a></li>
-							<li><a>Spring Cloud Data Flow</a></li>
-							<li><a>Spring Data</a></li>
-							<li><a>Spring Integration</a></li>
-							<li><a>Spring Batch</a></li>
-							<li><a>Spring Security</a></li>
-							<li><a class="a-wrapper">View all projects</a></li>
-							<li><a class="small-font">DEVELOPMENT TOOLS</a></li>
-							<li><a>Spring Tools 4</a></li>
-							<li><a>Spring Initializr</a>
-							<svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-								<polyline points="15 10.94 15 15 1 15 1 1 5.06 1" fill="none" stroke="currentColor" stroke-miterlimit="10"
-									stroke-width="2"></polyline>
-								<polyline points="8.93 1 15 1 15 7.07" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
-								</polyline>
-								<line x1="15" y1="1" x2="8" y2="8" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></line>
-							</svg></li>
-						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link">Training</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link">Support</a>
-					</li>
-					<li class="nav-item">
-						<div>
-							<span>Community</span>
-							<div class="nav-arrow"></div>
-						</div>
-						<ul class="dropdown">
-							<li><a>Overview</a></li>
-							<li><a>Events</a></li>
-							<li><a>Team</a></li>
-						</ul>
-					</li>
-				</ul>
-				<div class="hamburger">
+				<ul id="navList" class="nav-list"></ul>
+				<div id="hamburger" class="hamburger">
 					<div class="burger-bar"></div>
 					<div class="burger-bar"></div>
 					<div class="burger-bar"></div>
-				</div>
+				</div>				
+				<ul id="navMobile" class="display nav-list-mobile "></ul>
 			</div>
 		</nav>		
 	</header>
@@ -122,6 +50,7 @@
 		</div>
 	</div>
 	</div>
-	<script src="./src/js/srcipt.js"></script>
+	<script src="./src/js/searchScript.js"></script>
+	<script src="./src/js/headerScript.js"></script>
 </body>
 </html>
