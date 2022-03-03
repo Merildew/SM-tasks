@@ -110,33 +110,35 @@ document.getElementById("hamburger").addEventListener("click", () => {
   burgerLines[2].classList.toggle("burger-bar-3");
 });
 
-const navItems = document.getElementsByClassName("list-container");
+const navItems = document.getElementsByClassName("dropdownMobile");
 
 [...navItems].forEach((elem) => {
-  elem.addEventListener("click", (event) => {
-    const dropdown = elem.nextElementSibling;
+  elem.previousElementSibling.addEventListener("click", (event) => {
+    const dropdown = elem;
     dropdown.style = "";
     if (dropdown.offsetHeight === 0) {
-      elem.lastChild.style.transform = "rotate(225deg)";
+      console.log("открыть");
+      elem.previousElementSibling.lastChild.classList.toggle("nav-arrow-scale");
       dropdown.classList.toggle("display");
       const height = dropdown.offsetHeight;
       dropdown.style.height = 0;
       let counter = 0;
       const movement = setInterval(function () {
-        counter++;
+        counter += 3;
         dropdown.style.height = `${counter}px`;
-        if (counter === height) {
+        if (counter >= height) {
           clearInterval(movement);
         }
       }, 0);
     } else {
-      elem.lastChild.style.transform = "rotate(45deg)";
+      console.log("закрыть");
+      elem.previousElementSibling.lastChild.classList.toggle("nav-arrow-scale");
       const height = dropdown.offsetHeight;
       let counter = height;
       const movement = setInterval(function () {
-        counter--;
+        counter -= 3;
         dropdown.style.height = `${counter}px`;
-        if (counter === 0) {
+        if (counter <= 0) {
           dropdown.classList.toggle("display");
           clearInterval(movement);
         }
