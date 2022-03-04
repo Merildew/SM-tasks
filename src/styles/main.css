@@ -1,63 +1,80 @@
-*{
-	padding: 0;
-	margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.display {
+  display: none;
 }
 
 /* open-sans-regular - latin */
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fonts/open-sans-v27-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../assets/fonts/open-sans-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/open-sans-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../assets/fonts/open-sans-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../assets/fonts/open-sans-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../assets/fonts/open-sans-v27-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+  src: url("../assets/fonts/open-sans-v27-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/open-sans-v27-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/open-sans-v27-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../assets/fonts/open-sans-v27-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/open-sans-v27-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/open-sans-v27-latin-regular.svg#OpenSans")
+      format("svg"); /* Legacy iOS */
 }
 /* open-sans-700 - latin */
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  src: url('../assets/fonts/open-sans-v27-latin-700.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../assets/fonts/open-sans-v27-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/open-sans-v27-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../assets/fonts/open-sans-v27-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../assets/fonts/open-sans-v27-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../assets/fonts/open-sans-v27-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
+  src: url("../assets/fonts/open-sans-v27-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/open-sans-v27-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/open-sans-v27-latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../assets/fonts/open-sans-v27-latin-700.woff") format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/open-sans-v27-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/open-sans-v27-latin-700.svg#OpenSans") format("svg"); /* Legacy iOS */
 }
 @font-face {
-  font-family: 'Metropolis';
+  font-family: "Metropolis";
   font-style: normal;
   font-weight: 300;
-  src: url('../assets/fonts/Metropolis-Light.ttf');
-  src: local(''),
-       url('../assets/fonts/Metropolis-Light.ttf') format('truetype');
+  src: url("../assets/fonts/Metropolis-Light.ttf");
+  src: local(""), url("../assets/fonts/Metropolis-Light.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'Metropolis';
+  font-family: "Metropolis";
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fonts/Metropolis-Regular.ttf');
-  src: local(''),
-       url('../assets/fonts/Metropolis-Regular.ttf') format('truetype');
+  src: url("../assets/fonts/Metropolis-Regular.ttf");
+  src: local(""),
+    url("../assets/fonts/Metropolis-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'Metropolis';
+  font-family: "Metropolis";
   font-style: normal;
   font-weight: 500;
-  src: url('../assets/fonts/Metropolis-Bold.ttf');
-  src: local(''),
-       url('../assets/fonts/Metropolis-Bold.ttf') format('truetype');
+  src: url("../assets/fonts/Metropolis-Bold.ttf");
+  src: local(""), url("../assets/fonts/Metropolis-Bold.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'Metropolis';
+  font-family: "Metropolis";
   font-style: normal;
   font-weight: 600;
-  src: url('../assets/fonts/Metropolis-ExtraBold.ttf');
-  src: local(''),
-       url('../assets/fonts/Metropolis-ExtraBold.ttf') format('truetype');
+  src: url("../assets/fonts/Metropolis-ExtraBold.ttf");
+  src: local(""),
+    url("../assets/fonts/Metropolis-ExtraBold.ttf") format("truetype");
 }

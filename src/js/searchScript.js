@@ -34,18 +34,15 @@ const projectList = [
 insertResult(projectList);
 
 let typing;
-const input = document.getElementById("searchInput");
-input.addEventListener("keyup", function (event) {
-  clearTimeout(typing);
-  typing = setTimeout(() => {
-    const searchValue = input.value;
-    insertResult(searchFunction(searchValue));
-  }, 500);
-});
-
-input.addEventListener("keydown", function () {
-  clearTimeout(typing);
-});
+document
+  .getElementById("searchInput")
+  .addEventListener("keyup", function (event) {
+    clearTimeout(typing);
+    typing = setTimeout(() => {
+      const searchValue = event.target.value;
+      insertResult(searchFunction(searchValue));
+    }, 500);
+  });
 
 function searchFunction(value) {
   value = value.toLowerCase();
@@ -61,7 +58,7 @@ function insertResult(arr) {
   const projectSection = document.getElementById("projectsSection");
   projectSection.innerHTML = "";
   if (arr.length === 0) {
-    projectSection.innerHTML = `<p class="flex-item no-result">No results</p>`;
+    projectSection.innerHTML = `<p class="projects-item no-result">No results</p>`;
   } else
     arr.forEach((item) => {
       projectSection.append(
@@ -74,7 +71,7 @@ function createProjectBlock(src, title, text) {
   const linkBlock = document.createElement("a");
   const img = document.createElement("img");
   const div = document.createElement("div");
-  linkBlock.classList.add("flex-item");
+  linkBlock.classList.add("projects-item");
   img.classList.add("project-icon");
   div.classList.add("project-text");
   img.setAttribute("src", `./src/assets/images/${src}`);

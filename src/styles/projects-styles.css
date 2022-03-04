@@ -3,6 +3,7 @@
   padding: 8px 0;
   border-bottom: 1px solid #ebf2f2;
 }
+
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -32,6 +33,7 @@
   position: relative;
   padding: 16px 0;
   cursor: default;
+  z-index: 1;
 }
 
 .nav-item:hover ul,
@@ -122,20 +124,6 @@ ul {
   display: block;
 }
 
-.hamburger {
-  cursor: pointer;
-  padding: 8px;
-  display: none;
-  z-index: 5;
-}
-
-.burger-bar {
-  width: 19px;
-  height: 3px;
-  background-color: #191e1e;
-  margin-bottom: 3px;
-}
-
 .projects-info {
   max-width: 1140px;
   margin: 0 auto;
@@ -160,7 +148,7 @@ h1 {
   color: #333;
 }
 
-.projects-panel {
+.projects-container {
   background-color: #ebf2f2;
   padding: 50px 20px;
   flex-grow: 1;
@@ -194,6 +182,7 @@ h1 {
 .search-icon {
   position: relative;
 }
+
 .search-icon::before {
   content: "";
   background: url("../assets/images/logo.svg") no-repeat;
@@ -205,12 +194,12 @@ h1 {
   height: 28px;
 }
 
-.flex-panel {
+.projects-panel {
   max-width: 1140px;
   margin: 0 auto;
 }
 
-.flex-items {
+.projects-list {
   display: flex;
   justify-content: space-between;
   width: 82%;
@@ -219,7 +208,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-.flex-item {
+.projects-item {
   display: flex;
   justify-content: space-between;
   width: 48.5%;
@@ -231,12 +220,12 @@ h1 {
   border-radius: 5px;
 }
 
-.flex-item:hover {
+.projects-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px 0 rgb(108 135 135 / 20%);
 }
 
-.flex-item p {
+.projects-item p {
   line-height: 1.7;
   color: #333;
   font-family: Open Sans, sans-serif;
@@ -281,10 +270,6 @@ a {
   text-decoration: none;
 }
 
-.nav-list-mobile {
-  transform: translateY(-100%);
-}
-
 /*media queries*/
 
 @media (max-width: 1100px) {
@@ -294,12 +279,12 @@ a {
 }
 
 @media (max-width: 1000px) {
-  .flex-items,
+  .projects-list,
   .search-form {
     width: 100%;
   }
 
-  .projects-panel {
+  .projects-container {
     padding-top: 25px;
   }
 }
@@ -319,10 +304,6 @@ a {
     transform: rotate(45deg) scale(1);
   }
 
-  #navMobile.display {
-    transform: translateY(-100%);
-  }
-
   .hamburger {
     display: block;
   }
@@ -333,11 +314,7 @@ a {
     z-index: 2;
   }
 
-  .nav-list-mobile {
-    transform: translateY(0);
-  }
-
-  .list-container,
+  .title-container,
   .nav-link {
     display: flex;
     justify-content: space-between;
@@ -345,16 +322,25 @@ a {
     padding: 15px 0;
     border-bottom: 1px solid #666;
   }
-  .list-container {
+  .title-container {
     margin-bottom: 15px;
   }
   .nav-item {
     padding: 0;
   }
+
+  .nav-list-mobile {
+    transform: translateY(0);
+  }
+
+  #navListMobile.show {
+    transform: translateY(-100%);
+    transition: transform 0.35s cubic-bezier(0.694, 0, 0.335, 1);
+  }
 }
 
 @media (max-width: 800px) {
-  .flex-item {
+  .projects-item {
     width: 100%;
   }
 
@@ -378,83 +364,7 @@ a {
     font-size: 1.25rem;
   }
 
-  .flex-item p {
+  .projects-item p {
     font-size: 14px;
   }
-}
-
-/*mobile */
-
-.nav-list-mobile {
-  overflow-y: scroll;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #191e1e;
-  z-index: 3;
-  padding: 40px 60px;
-  transition: transform 0.35s cubic-bezier(0.694, 0, 0.335, 1);
-  box-sizing: border-box;
-}
-
-.nav-list-mobile .nav-item span,
-.nav-list-mobile .nav-item {
-  color: #fff;
-  font-size: 25px;
-  font-weight: 600;
-}
-
-.burger-bar-1 {
-  transform: rotate(45deg);
-  background-color: #fff;
-  width: 23px;
-  height: 1px;
-  position: relative;
-  bottom: -6px;
-}
-
-.burger-bar-2 {
-  transform: rotate(-45deg);
-  background-color: #fff;
-  width: 23px;
-  height: 1px;
-  position: relative;
-  bottom: -2px;
-}
-
-.burger-bar-3 {
-  transform: scale(0);
-}
-
-.absolute {
-  position: absolute;
-}
-
-.dropdownMobile {
-  overflow: hidden;
-}
-
-.dropdownMobile a {
-  color: #98afae;
-  font-size: 20px;
-}
-
-.dropdownMobile a:active,
-.dropdownMobile a:hover,
-.dropdownMobile a:focus {
-  color: #6db33f;
-}
-
-.dropdownMobile li > a {
-  cursor: pointer;
-}
-
-.display {
-  display: none;
-}
-
-.nav-arrow-scale {
-  transform: rotate(45deg) scale(-1);
 }

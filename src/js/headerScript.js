@@ -47,7 +47,7 @@ const headerItems = [
 ];
 
 insertHeader(document.getElementById("navList"), ["dropdown"]);
-insertHeader(document.getElementById("navMobile"), [
+insertHeader(document.getElementById("navListMobile"), [
   "dropdownMobile",
   "display",
 ]);
@@ -65,10 +65,10 @@ function createHeaderElement(title, items, ...className) {
   navItem.classList.add("nav-item");
   if (items !== null) {
     const div = document.createElement("div");
-    div.classList.add("list-container");
+    div.classList.add("title-container");
     div.innerHTML = `<span>${title}</span><div class="nav-arrow"></div>`;
     const ul = document.createElement("ul");
-    className.forEach((elem) => ul.classList.add(...className));
+    ul.classList.add(...className);
     items.forEach((element) => {
       const li = document.createElement("li");
       li.innerHTML = `<a>${element}</a>`;
@@ -102,22 +102,11 @@ function customizeProject(parentNode) {
         </svg></a>`;
 }
 
-document.getElementById("hamburger").addEventListener("click", () => {
-  document.getElementById("navMobile").classList.toggle("display");
-  const burgerLines = document.getElementsByClassName("burger-bar");
-  burgerLines[0].classList.toggle("burger-bar-1");
-  burgerLines[1].classList.toggle("burger-bar-2");
-  burgerLines[2].classList.toggle("burger-bar-3");
-});
-
-const navItems = document.getElementsByClassName("dropdownMobile");
-
-[...navItems].forEach((elem) => {
+[...document.getElementsByClassName("dropdownMobile")].forEach((elem) => {
   elem.previousElementSibling.addEventListener("click", (event) => {
     const dropdown = elem;
     dropdown.style = "";
     if (dropdown.offsetHeight === 0) {
-      console.log("открыть");
       elem.previousElementSibling.lastChild.classList.toggle("nav-arrow-scale");
       dropdown.classList.toggle("display");
       const height = dropdown.offsetHeight;
@@ -131,7 +120,6 @@ const navItems = document.getElementsByClassName("dropdownMobile");
         }
       }, 0);
     } else {
-      console.log("закрыть");
       elem.previousElementSibling.lastChild.classList.toggle("nav-arrow-scale");
       const height = dropdown.offsetHeight;
       let counter = height;
@@ -145,4 +133,12 @@ const navItems = document.getElementsByClassName("dropdownMobile");
       }, 0);
     }
   });
+});
+
+document.getElementById("hamburger").addEventListener("click", () => {
+  document.getElementById("navListMobile").classList.toggle("show");
+  const burgerLines = document.getElementsByClassName("burger-bar");
+  burgerLines[0].classList.toggle("burger-bar-1");
+  burgerLines[1].classList.toggle("burger-bar-2");
+  burgerLines[2].classList.toggle("burger-bar-3");
 });
