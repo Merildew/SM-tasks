@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HEADERLINKS from "../../constants/headerLinks";
+import HEADER_LINKS from "../../constants/headerLinks";
 import NavLinks from "./NavLinks";
 
 function Navigation() {
@@ -16,9 +16,9 @@ function Navigation() {
         <div className={show ? "burger-bar burger-bar-3" : "burger-bar"}></div>
       </div>
       {show ? (
-        <NavLinks headerLinks={HEADERLINKS} classForNav="nav-list" />
+        <NavLinks headerLinks={HEADER_LINKS} classForNav="nav-list" />
       ) : (
-        <NavLinks headerLinks={HEADERLINKS} classForNav="nav-list show" />
+        <NavLinks headerLinks={HEADER_LINKS} classForNav="nav-list show" />
       )}
     </nav>
   );

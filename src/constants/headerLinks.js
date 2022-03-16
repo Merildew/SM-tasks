@@ -1,4 +1,4 @@
-const HEADERLINKS = [
+const HEADER_LINKS = [
   {
     title: "Why Spring",
     items: [
@@ -47,4 +47,4 @@ const HEADERLINKS = [
   },
 ];
 
-export default HEADERLINKS;
+export default HEADER_LINKS;
