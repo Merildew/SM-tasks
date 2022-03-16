@@ -1,0 +1,153 @@
+.projects-container {
+  background-color: #ebf2f2;
+  padding: 50px 20px;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+.search-form-container {
+  max-width: 1140px;
+  margin: 0 auto 25px;
+}
+
+.search-form {
+  width: 82%;
+}
+
+.search-input {
+  width: 100%;
+  color: #333;
+  padding: 0 8px;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.search-input:focus-visible {
+  outline: none;
+  box-shadow: 0 10px 20px 0 rgb(108 135 135 / 20%);
+}
+
+.search-icon {
+  position: relative;
+}
+
+.search-icon::before {
+  content: "";
+  background: url("../../assets/images/logo.svg") no-repeat;
+  background-size: contain;
+  left: calc(100% - 36px);
+  top: 6px;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+}
+
+.projects-list {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.projects-list {
+  display: flex;
+  justify-content: space-between;
+  width: 82%;
+  margin-right: 0;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.projects-item {
+  display: flex;
+  justify-content: space-between;
+  width: 48.5%;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 25px;
+  border: 1px solid #d9e9e9;
+  border-radius: 5px;
+}
+
+.projects-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px 0 rgb(108 135 135 / 20%);
+}
+
+.projects-text {
+  line-height: 1.7;
+  color: #333;
+  font-family: Open Sans, sans-serif;
+  margin: 16px 0;
+}
+
+.no-result {
+  width: 82%;
+  margin-left: auto;
+  color: #333;
+  font-size: 20px;
+  text-align: end;
+  display: block;
+  padding: 10px 8px;
+  text-transform: uppercase;
+  font-family: Open Sans, sans-serif;
+}
+
+.project-icon {
+  height: 60px;
+  max-width: 18.5%;
+  align-self: flex-start;
+}
+
+.project-text-block {
+  width: 76.5%;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-family: Metropolis, sans-serif;
+  font-weight: 500;
+  color: #191e1e;
+}
+
+@media (max-width: 1000px) {
+  .projects-list,
+  .search-form {
+    width: 100%;
+  }
+
+  .projects-container {
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .projects-item {
+    width: 100%;
+  }
+
+  .project-icon {
+    height: auto;
+    max-height: 60px;
+  }
+
+  .projects-info p {
+    font-size: 20px;
+    line-height: 1.7em;
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1em;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .projects-text {
+    font-size: 14px;
+  }
+}
