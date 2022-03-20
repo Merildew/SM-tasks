@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Dropdown(props) {
+export function Dropdown(props) {
   const dropdownLinks = props.items.map((item, index) => {
     if (item === "DEVELOPMENT TOOLS") {
       return (
@@ -39,5 +39,3 @@ function Dropdown(props) {
 Dropdown.propTypes = {
   items: PropTypes.array,
 };
-
-export default Dropdown;

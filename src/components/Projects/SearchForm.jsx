@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-function SearchForm(props) {
+export function SearchForm(props) {
   const [value, setValue] = useState("");
 
   useEffect(() => {
@@ -35,5 +35,3 @@ function SearchForm(props) {
 SearchForm.propTypes = {
   onValueChange: PropTypes.func,
 };
-
-export default SearchForm;

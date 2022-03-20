@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.css";
 import Logo from "../../assets/images/spring-logo.svg";
-import Navigation from "./Navigation";
+import { Navigation } from "./Navigation";
 
-function Header() {
+export function Header() {
   return (
     <header>
       <div className=" header-wrapper container">
@@ -12,10 +12,8 @@ function Header() {
             <img className="header-logo-image" src={Logo} alt="" />
           </a>
         </div>
-        <Navigation></Navigation>
+        <Navigation />
       </div>
     </header>
   );
 }
-
-export default Header;

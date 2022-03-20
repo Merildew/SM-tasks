@@ -1,13 +1,13 @@
 import "./App.css";
 import React from "react";
-import Header from "./components/Header/Header";
-import InfoSection from "./components/InfoSection/InfoSection";
-import ProjectsSection from "./components/Projects/ProjectsSection";
+import { Header } from "./components/Header/Header";
+import { InfoSection } from "./components/InfoSection/InfoSection";
+import { ProjectsSection } from "./components/Projects/ProjectsSection";
 
 function App() {
   return (
     <div className="wrapper">
-      <Header></Header>
+      <Header />
       <InfoSection
         title="Projects"
         text="From configuration to security, web apps to big data—whatever the
@@ -15,7 +15,7 @@ function App() {
         Project to help you build it. Start small and use just what you
         need—Spring is modular by design."
       />
-      <ProjectsSection></ProjectsSection>
+      <ProjectsSection />
     </div>
   );
 }

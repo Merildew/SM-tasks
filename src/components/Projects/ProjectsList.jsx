@@ -1,24 +1,36 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ProjectsItem from "./ProjectsItem";
 
-function ProjectsList(props) {
+function ProjectsItem(props) {
+  return (
+    <a className="projects-item">
+      <img className="project-icon" src={props.src} alt=""></img>
+      <div className="project-text-block">
+        <h3>{props.title}</h3>
+        <p className="projects-text">{props.text}</p>
+      </div>
+    </a>
+  );
+}
+
+export function ProjectsList(props) {
   const projects = props.projects;
 
-  const projectsItems = projects.map((item) => {
-    return (
-      <ProjectsItem
-        src={item.src}
-        title={item.title}
-        text={item.text}
-        key={item.title}
-      />
-    );
-  });
-  if (projectsItems.length !== 0)
+  if (projects.length !== 0)
     return (
       <div className="container">
-        <section className="projects-list">{projectsItems}</section>
+        <section className="projects-list">
+          {projects.map((item) => {
+            return (
+              <ProjectsItem
+                src={item.src}
+                title={item.title}
+                text={item.text}
+                key={item.title}
+              />
+            );
+          })}
+        </section>
       </div>
     );
   else
@@ -33,4 +45,8 @@ ProjectsList.propTypes = {
   projects: PropTypes.array,
 };
 
-export default ProjectsList;
+ProjectsItem.propTypes = {
+  src: PropTypes.string,
+  title: PropTypes.string,
+  text: PropTypes.string,
+};

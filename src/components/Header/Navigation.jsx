@@ -1,11 +1,25 @@
 import React, { useState } from "react";
-import HEADER_LINKS from "../../constants/headerLinks";
-import NavLinks from "./NavLinks";
+import PropTypes from "prop-types";
+import { HEADER_LINKS } from "../../constants/headerLinks";
+import { NavTitle } from "./NavTitle";
 
-function Navigation() {
+function NavLinks(props) {
+  const headerLinks = props.headerLinks;
+
+  return (
+    <ul className={props.classForNav}>
+      {headerLinks.map((item) => {
+        return (
+          <NavTitle key={item.title} title={item.title} items={item.items} />
+        );
+      })}
+    </ul>
+  );
+}
+
+export function Navigation() {
   const [show, setShow] = useState(false);
   function onShow() {
-    console.log(show);
     setShow(!show);
   }
   return (
@@ -24,4 +38,7 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+NavLinks.propTypes = {
+  headerLinks: PropTypes.array,
+  classForNav: PropTypes.string,
+};

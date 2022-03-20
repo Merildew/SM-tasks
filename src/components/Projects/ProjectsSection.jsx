@@ -1,14 +1,13 @@
-import React, { useState, useRef } from "react";
-import SearchForm from "./SearchForm";
+import React, { useState } from "react";
 import "./styles.css";
-import PROJECTS from "../../constants/projects";
-import ProjectsList from "./ProjectsList";
+import { PROJECTS } from "../../constants/projects";
+import { ProjectsList } from "./ProjectsList";
+import { SearchForm } from "./SearchForm";
 
-function ProjectsSection() {
+export function ProjectsSection() {
   const [value, setValue] = useState("");
-  const result = useRef(PROJECTS);
 
-  result.current = PROJECTS.filter((project) => {
+  let result = PROJECTS.filter((project) => {
     return (
       project.title.toLowerCase().includes(value) ||
       project.text.toLowerCase().includes(value)
@@ -21,10 +20,8 @@ function ProjectsSection() {
 
   return (
     <div className="projects-container">
-      <SearchForm onValueChange={search}></SearchForm>
-      <ProjectsList projects={result.current}></ProjectsList>
+      <SearchForm onValueChange={search} />
+      <ProjectsList projects={result} />
     </div>
   );
 }
-
-export default ProjectsSection;

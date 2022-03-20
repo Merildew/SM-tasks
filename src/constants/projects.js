@@ -5,7 +5,7 @@ import SpringCloud from "../assets/images/spring-cloud.svg";
 import SpringDataFlow from "../assets/images/spring-data-flow.svg";
 import SpringSecurity from "../assets/images/spring-security.svg";
 
-const PROJECTS = [
+export const PROJECTS = [
   {
     src: SpringBoot,
     title: "Spring Boot",
@@ -37,5 +37,3 @@ const PROJECTS = [
     text: "Protects your application with comprehensive and extensible authentication and authorization support.",
   },
 ];
-
-export default PROJECTS;

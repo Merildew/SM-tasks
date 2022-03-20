@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import Dropdown from "./dropdown";
+import { Dropdown } from "./dropdown";
 
-function NavTitle(props) {
+export function NavTitle(props) {
   const [focus, setFocus] = useState(false);
   const [click, setClick] = useState(false);
   const [dimensions, setDimensions] = useState({
@@ -65,5 +65,3 @@ NavTitle.propTypes = {
   title: PropTypes.string,
   items: PropTypes.array,
 };
-
-export default NavTitle;

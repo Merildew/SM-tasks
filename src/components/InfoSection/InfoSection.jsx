@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./styles.css";
 
-function InfoSection(props) {
+export function InfoSection(props) {
   return (
     <div className="projects-info">
       <h1>{props.title}</h1>
@@ -15,5 +15,3 @@ InfoSection.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,
 };
-
-export default InfoSection;
