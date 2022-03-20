@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
+import "./styles.css";
 
 function ProjectsItem(props) {
   return (
@@ -13,14 +15,13 @@ function ProjectsItem(props) {
   );
 }
 
-export function ProjectsList(props) {
-  const projects = props.projects;
-
-  if (projects.length !== 0)
+export function ProjectsList() {
+  const { result } = useSelector((state) => state.search);
+  if (result.length !== 0)
     return (
       <div className="container">
         <section className="projects-list">
-          {projects.map((item) => {
+          {result.map((item) => {
             return (
               <ProjectsItem
                 src={item.src}
@@ -40,10 +41,6 @@ export function ProjectsList(props) {
       </div>
     );
 }
-
-ProjectsList.propTypes = {
-  projects: PropTypes.array,
-};
 
 ProjectsItem.propTypes = {
   src: PropTypes.string,
