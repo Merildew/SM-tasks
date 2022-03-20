@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import { InfoSection } from "../components/InfoSection/InfoSection";
-import { ProjectsSection } from "../components/Projects/ProjectsSection";
 import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { SearchForm } from "../components/Projects/SearchForm";
+import { ProjectsList } from "../components/Projects/ProjectsList";
 
 export function MainPage() {
   const { login, pass } = useSelector((state) => state.user);
@@ -16,7 +17,10 @@ export function MainPage() {
         Project to help you build it. Start small and use just what you
         need—Spring is modular by design."
         />
-        <ProjectsSection />
+        <div className="projects-container">
+          <SearchForm />
+          <ProjectsList />
+        </div>
       </>
     );
   } else return <Navigate replace to="/login" />;

@@ -1,5 +1,6 @@
 {
   "name": "spring",
+  "homepage": "http://Merildew.github.io/SM-tasks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,12 +19,13 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
     "sass": "^1.49.9",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js",
-    "build": "webpack --config config/webpack.prod.js",
+    "build": "react-scripts build",
     "test": "eslint **/*.js",
     "eject": "react-scripts eject"
   },

@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { search } from "../../redux/reducers/searchSlice";
+import "./styles.css";
 
-export function SearchForm(props) {
-  const [value, setValue] = useState("");
-
-  useEffect(() => {
-    const typing = setTimeout(() => {
-      props.onValueChange(value);
-    }, 500);
-
-    return () => {
+export function SearchForm() {
+  const dispatch = useDispatch();
+  let typing;
+  function searchAsync(value) {
+    if (typing) {
       clearTimeout(typing);
-    };
-  });
+    }
+    typing = setTimeout(() => {
+      dispatch(search({ value }));
+    }, 500);
+  }
 
   return (
     <div className="search-form-container ">
@@ -24,14 +25,10 @@ export function SearchForm(props) {
             className="search-input"
             name="projectsList"
             placeholder="Find projects"
-            onKeyUp={(event) => setValue(event.target.value)}
+            onKeyUp={(event) => searchAsync(event.target.value)}
           ></input>
         </div>
       </form>
     </div>
   );
 }
-
-SearchForm.propTypes = {
-  onValueChange: PropTypes.func,
-};
