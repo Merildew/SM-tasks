@@ -1,0 +1,89 @@
+.login-section {
+  background-color: #ebf2f2;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+.login-form-wrapper {
+  max-width: 1140px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.login-form {
+  width: 48.5%;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #d9e9e9;
+  border-radius: 5px;
+  margin: 80px auto;
+  box-shadow: 0 10px 20px 0 rgb(108 135 135 / 20%);
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: Metropolis, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  font-size: 18px;
+  color: #333;
+  padding: 0 8px;
+  height: 40px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #d9e9e9;
+}
+
+.form-input:focus-visible {
+  outline: none;
+  border-bottom: 2px solid #6db33f;
+}
+
+.form-submit-button {
+  margin: 20px auto 0px;
+  width: 48.2%;
+  padding: 8px 0;
+  font-family: Metropolis, sans-serif;
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
+  background-color: #6db33f;
+  color: #ebf2f2;
+}
+
+.form-submit-button:hover,
+.form-submit-button:focus,
+.form-submit-button:active {
+  box-shadow: 1px 1px 10px 10px rgb(108 135 135 / 20%) inset;
+  cursor: pointer;
+}
+
+.form-title {
+  margin: 24px 0;
+}
+
+@media (max-width: 900px) {
+  .login-form {
+    width: 82.5%;
+  }
+}
+
+@media (max-width: 500px) {
+  .form-title {
+    font-size: 42px;
+  }
+
+  .form-label {
+    font-size: 20px;
+  }
+}

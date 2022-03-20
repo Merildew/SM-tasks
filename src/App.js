@@ -1,21 +1,18 @@
 import "./App.css";
 import React from "react";
 import { Header } from "./components/Header/Header";
-import { InfoSection } from "./components/InfoSection/InfoSection";
-import { ProjectsSection } from "./components/Projects/ProjectsSection";
+import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { Route, Routes } from "react-router-dom";
+import { MainPage } from "./pages/MainPage";
 
 function App() {
   return (
     <div className="wrapper">
       <Header />
-      <InfoSection
-        title="Projects"
-        text="From configuration to security, web apps to big data—whatever the
-        infrastructure needs of your application may be, there is a Spring
-        Project to help you build it. Start small and use just what you
-        need—Spring is modular by design."
-      />
-      <ProjectsSection />
+      <Routes>
+        <Route exact path="/login" element={<LoginPage />}></Route>
+        <Route exact path="/" element={<MainPage />}></Route>
+      </Routes>
     </div>
   );
 }
