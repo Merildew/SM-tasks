@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.04657122.css",
+    "main.js": "/static/js/main.d2845691.js",
+    "static/js/787.fbf6fb21.chunk.js": "/static/js/787.fbf6fb21.chunk.js",
+    "static/media/Metropolis-Regular.ttf": "/static/media/Metropolis-Regular.3e96c38bc01555998420.ttf",
+    "static/media/Metropolis-ExtraBold.ttf": "/static/media/Metropolis-ExtraBold.7df160fef8980791a36b.ttf",
+    "static/media/Metropolis-Bold.ttf": "/static/media/Metropolis-Bold.757ca8bef5ee90fd406c.ttf",
+    "static/media/Metropolis-Light.ttf": "/static/media/Metropolis-Light.088fbf5645d535ea6e9c.ttf",
+    "static/media/open-sans-v27-latin-700.svg": "/static/media/open-sans-v27-latin-700.1418c060da5f38c8a0ff.svg",
+    "static/media/open-sans-v27-latin-regular.svg": "/static/media/open-sans-v27-latin-regular.a9aff17ee65c2d3dd7a9.svg",
+    "static/media/open-sans-v27-latin-700.ttf": "/static/media/open-sans-v27-latin-700.ac7fd199b45ea19e55a1.ttf",
+    "static/media/open-sans-v27-latin-regular.ttf": "/static/media/open-sans-v27-latin-regular.d4c15d4c24a1ddb198ef.ttf",
+    "static/media/open-sans-v27-latin-regular.woff": "/static/media/open-sans-v27-latin-regular.6f6541140f45c8410bb8.woff",
+    "static/media/open-sans-v27-latin-700.woff": "/static/media/open-sans-v27-latin-700.043b0bf0b516558445d6.woff",
+    "static/media/open-sans-v27-latin-regular.eot": "/static/media/open-sans-v27-latin-regular.66fc98152d277854fd71.eot",
+    "static/media/open-sans-v27-latin-700.eot": "/static/media/open-sans-v27-latin-700.e6b7ad3259f533eaeacb.eot",
+    "static/media/open-sans-v27-latin-regular.woff2": "/static/media/open-sans-v27-latin-regular.a2d02404d087c7c068d4.woff2",
+    "static/media/open-sans-v27-latin-700.woff2": "/static/media/open-sans-v27-latin-700.166dc5efb248e5752096.woff2",
+    "static/media/spring-framework.svg": "/static/media/spring-framework.3459f100e370bff957ffef7cc6ca976c.svg",
+    "static/media/spring-logo.svg": "/static/media/spring-logo.5e950eb412f3de03ef03279d74b24a04.svg",
+    "static/media/spring-data-flow.svg": "/static/media/spring-data-flow.466ad4f32e433d432ec19fad70174b43.svg",
+    "static/media/logo.svg": "/static/media/logo.bce2f75cb2c37636c9f2.svg",
+    "static/media/spring-cloud.svg": "/static/media/spring-cloud.a2fb421b6dba908bd2a2e5c43703896b.svg",
+    "static/media/spring-boot.svg": "/static/media/spring-boot.93b7777e7f5c92da64b5a65aabd99bd1.svg",
+    "static/media/spring-data.svg": "/static/media/spring-data.a70fab0e48b77a3c08f87f1382a85556.svg",
+    "static/media/spring-security.svg": "/static/media/spring-security.1c141abb42cce353c52a49ce66ac617c.svg",
+    "index.html": "/index.html",
+    "main.04657122.css.map": "/static/css/main.04657122.css.map",
+    "main.d2845691.js.map": "/static/js/main.d2845691.js.map",
+    "787.fbf6fb21.chunk.js.map": "/static/js/787.fbf6fb21.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04657122.css",
+    "static/js/main.d2845691.js"
+  ]
+}
