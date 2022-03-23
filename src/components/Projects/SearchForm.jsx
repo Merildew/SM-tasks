@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { SEARCH } from "../../redux/actions/searchActions";
+import { searchAction } from "../../redux/actions/searchActions";
 import "./styles.css";
 
 export function SearchForm() {
@@ -11,7 +11,7 @@ export function SearchForm() {
       clearTimeout(typing);
     }
     typing = setTimeout(() => {
-      dispatch({ type: SEARCH, payload: { value: value } });
+      dispatch(searchAction({ value: value }));
     }, 500);
   }
 

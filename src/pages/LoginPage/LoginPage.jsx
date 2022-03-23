@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { SIGN_IN } from "../../redux/actions/loginActions";
+import { signInAction } from "../../redux/actions/loginActions";
 import "./styles.css";
 
 export function LoginPage() {
@@ -12,7 +12,7 @@ export function LoginPage() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    dispatch({ type: SIGN_IN, payload: { login: login, pass: pass } });
+    dispatch(signInAction({ login: login, pass: pass }));
     navigate("/");
   }
 
