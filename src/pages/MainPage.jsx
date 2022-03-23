@@ -1,13 +1,12 @@
 import React, { Fragment } from "react";
 import { InfoSection } from "../components/InfoSection/InfoSection";
 import { Navigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { user } from "../redux/selectors";
 import { SearchForm } from "../components/Projects/SearchForm";
 import { ProjectsList } from "../components/Projects/ProjectsList";
 
 export function MainPage() {
-  const user = useSelector((store) => store.login);
-  if (user.login === "admin" && user.pass === "1234") {
+  if (user().login === "admin" && user().pass === "1234") {
     return (
       <>
         <InfoSection
