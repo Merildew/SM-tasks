@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useSelector } from "react-redux";
+import { result } from "../../redux/selectors";
 import "./styles.css";
 
 function ProjectsItem(props) {
@@ -16,7 +16,6 @@ function ProjectsItem(props) {
 }
 
 export function ProjectsList() {
-  const { result } = useSelector((state) => state.search);
   if (result.length !== 0)
     return (
       <div className="container">
