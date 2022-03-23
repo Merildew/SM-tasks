@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { authorization } from "../../redux/reducers/loginSlice";
 import { useNavigate } from "react-router-dom";
+import { SIGN_IN } from "../../redux/actions/loginActions";
 import "./styles.css";
 
 export function LoginPage() {
@@ -12,12 +12,7 @@ export function LoginPage() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    dispatch(
-      authorization({
-        login: login,
-        pass: pass,
-      })
-    );
+    dispatch({ type: SIGN_IN, payload: { login: login, pass: pass } });
     navigate("/");
   }
 

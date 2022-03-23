@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Dropdown } from "./dropdown";
+import { Dropdown } from "./Dropdown";
 
 export function NavTitle(props) {
   const [focus, setFocus] = useState(false);

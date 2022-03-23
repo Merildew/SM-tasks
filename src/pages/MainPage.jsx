@@ -6,8 +6,8 @@ import { SearchForm } from "../components/Projects/SearchForm";
 import { ProjectsList } from "../components/Projects/ProjectsList";
 
 export function MainPage() {
-  const { login, pass } = useSelector((state) => state.user);
-  if (login === "admin" && pass === "1234") {
+  const user = useSelector((store) => store.login);
+  if (user.login === "admin" && user.pass === "1234") {
     return (
       <>
         <InfoSection
