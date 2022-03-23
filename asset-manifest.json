@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SM-tasks/static/css/main.9fbab48c.css",
-    "main.js": "/SM-tasks/static/js/main.eb0220ad.js",
+    "main.js": "/SM-tasks/static/js/main.3e0e5f08.js",
     "static/js/787.fbf6fb21.chunk.js": "/SM-tasks/static/js/787.fbf6fb21.chunk.js",
     "static/media/Metropolis-Regular.ttf": "/SM-tasks/static/media/Metropolis-Regular.3e96c38bc01555998420.ttf",
     "static/media/Metropolis-ExtraBold.ttf": "/SM-tasks/static/media/Metropolis-ExtraBold.7df160fef8980791a36b.ttf",
@@ -27,11 +27,11 @@
     "static/media/spring-security.svg": "/SM-tasks/static/media/spring-security.1c141abb42cce353c52a49ce66ac617c.svg",
     "index.html": "/SM-tasks/index.html",
     "main.9fbab48c.css.map": "/SM-tasks/static/css/main.9fbab48c.css.map",
-    "main.eb0220ad.js.map": "/SM-tasks/static/js/main.eb0220ad.js.map",
+    "main.3e0e5f08.js.map": "/SM-tasks/static/js/main.3e0e5f08.js.map",
     "787.fbf6fb21.chunk.js.map": "/SM-tasks/static/js/787.fbf6fb21.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9fbab48c.css",
-    "static/js/main.eb0220ad.js"
+    "static/js/main.3e0e5f08.js"
   ]
 }
