@@ -5,5 +5,5 @@ export function user() {
 }
 
 export function search() {
-  return useSelector((state) => state.search.result);
+  return useSelector((state) => state.search);
 }

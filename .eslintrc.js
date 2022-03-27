@@ -23,4 +23,5 @@ module.exports = {
     "require-jsdoc": 0,
     "prettier/prettier": ["error", { endOfLine: "auto" }],
   },
+  settings: { react: { version: "detect" } },
 };

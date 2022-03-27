@@ -28,11 +28,11 @@
     "webpack": "webpack-dev-server --config config/webpack.dev.js",
     "build": "react-scripts build",
     "deploy": "gh-pages -d build",
-    "test": "eslint **/*.js",
+    "eslint": "eslint **/*.{js,jsx}",
     "eject": "react-scripts eject"
   },
   "lint-staged": {
-    "*.js": [
+    "**/*.{js,jsx}": [
       "prettier --write --ignore-unknown",
       "eslint --cache --fix"
     ]

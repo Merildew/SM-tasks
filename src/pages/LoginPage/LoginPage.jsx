@@ -12,8 +12,27 @@ export function LoginPage() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    dispatch(signInAction({ login: login, pass: pass }));
-    navigate("/");
+    postFetch();
+  }
+
+  function postFetch() {
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ login: login, pass: pass }),
+    };
+    fetch("https://sm-spring-api.herokuapp.com/users", options)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) {
+          dispatch(signInAction({ isLogged: true }));
+          navigate("/");
+        } else {
+          dispatch(signInAction({ isLogged: false }));
+          window.location.reload();
+        }
+      })
+      .catch((error) => console.log(error));
   }
 
   return (

@@ -1,8 +1,7 @@
 import { SIGN_IN } from "../actions/loginActions";
 
 const initialState = {
-  login: "null",
-  pass: "null",
+  isLogged: false,
 };
 
 export const loginReducer = (state = initialState, action) => {
@@ -10,8 +9,7 @@ export const loginReducer = (state = initialState, action) => {
     case SIGN_IN: {
       return {
         ...state,
-        login: action.payload.login,
-        pass: action.payload.pass,
+        isLogged: action.payload.isLogged,
       };
     }
     default:

@@ -16,28 +16,37 @@ function ProjectsItem(props) {
 }
 
 export function ProjectsList() {
-  const result = search();
-  if (result.length !== 0)
+  const result = search().result;
+  const isLoaded = search().isLoaded;
+
+  if (isLoaded === true) {
+    if (result.length !== 0)
+      return (
+        <div className="container">
+          <section className="projects-list">
+            {result.map((item) => {
+              return (
+                <ProjectsItem
+                  src={item.src}
+                  title={item.title}
+                  text={item.text}
+                  key={item.title}
+                />
+              );
+            })}
+          </section>
+        </div>
+      );
+    else
+      return (
+        <div className="container">
+          <p className="projects-item no-result">No results</p>
+        </div>
+      );
+  } else
     return (
       <div className="container">
-        <section className="projects-list">
-          {result.map((item) => {
-            return (
-              <ProjectsItem
-                src={item.src}
-                title={item.title}
-                text={item.text}
-                key={item.title}
-              />
-            );
-          })}
-        </section>
-      </div>
-    );
-  else
-    return (
-      <div className="container">
-        <p className="projects-item no-result">No results</p>
+        <p className="projects-item no-result">Loading...</p>
       </div>
     );
 }

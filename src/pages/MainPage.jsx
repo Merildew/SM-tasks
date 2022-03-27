@@ -6,7 +6,7 @@ import { SearchForm } from "../components/Projects/SearchForm";
 import { ProjectsList } from "../components/Projects/ProjectsList";
 
 export function MainPage() {
-  if (user().login === "admin" && user().pass === "1234") {
+  if (user().isLogged === true) {
     return (
       <>
         <InfoSection
