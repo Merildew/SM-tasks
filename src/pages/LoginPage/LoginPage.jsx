@@ -1,38 +1,17 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { signInAction } from "../../redux/actions/loginActions";
 import "./styles.css";
+import { postFetch } from "../../test/postFetch";
 
 export function LoginPage() {
   const [login, setLogin] = useState("");
   const [pass, setPass] = useState("");
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   function handleSubmit(event) {
     event.preventDefault();
-    postFetch();
-  }
-
-  function postFetch() {
-    const options = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ login: login, pass: pass }),
-    };
-    fetch("https://sm-spring-api.herokuapp.com/users", options)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data) {
-          dispatch(signInAction({ isLogged: true }));
-          navigate("/");
-        } else {
-          dispatch(signInAction({ isLogged: false }));
-          window.location.reload();
-        }
-      })
-      .catch((error) => console.log(error));
+    dispatch(postFetch(login, pass, navigate));
   }
 
   return (
