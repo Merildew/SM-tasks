@@ -1,12 +1,14 @@
 import React, { Fragment } from "react";
 import { InfoSection } from "../components/InfoSection/InfoSection";
 import { Navigate } from "react-router-dom";
-import { user } from "../redux/selectors";
 import { SearchForm } from "../components/Projects/SearchForm";
 import { ProjectsList } from "../components/Projects/ProjectsList";
+import { useSelector } from "react-redux";
+import { userSelector } from "../redux/selectors";
 
 export function MainPage() {
-  if (user().isLogged === true) {
+  const { isLogged } = useSelector(userSelector);
+  if (isLogged === true) {
     return (
       <>
         <InfoSection

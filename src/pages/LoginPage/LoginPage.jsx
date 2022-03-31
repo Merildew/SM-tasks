@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
-import { postFetch } from "../../test/postFetch";
+import { loginUser } from "../../test/loginUser";
 
 export function LoginPage() {
   const [login, setLogin] = useState("");
@@ -11,7 +11,7 @@ export function LoginPage() {
   const navigate = useNavigate();
   function handleSubmit(event) {
     event.preventDefault();
-    dispatch(postFetch(login, pass, navigate));
+    dispatch(loginUser(login, pass, navigate));
   }
 
   return (

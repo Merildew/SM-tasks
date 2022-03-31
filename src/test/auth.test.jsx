@@ -1,7 +1,15 @@
 /* eslint-disable no-undef */
-import { postFetch } from "./postFetch";
+import { loginUser } from "./loginUser";
 import { loginReducer } from "../redux/reducers/loginReducer";
 import { signInAction } from "../redux/actions/loginActions";
+import configureMockStore from "redux-mock-store";
+import thunk from "redux-thunk";
+
+const mockedUsedNavigate = jest.fn();
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useNavigate: () => mockedUsedNavigate,
+}));
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
@@ -9,8 +17,16 @@ global.fetch = jest.fn(() =>
   })
 );
 
+const middleware = [thunk];
+const mockStore = configureMockStore(middleware);
+const store = mockStore({});
+
 test("api call", async () => {
-  await postFetch("admin", "1234")();
+  const loginStatus = await loginUser(
+    "admin",
+    "1234",
+    mockedUsedNavigate
+  )(store.dispatch);
   expect(fetch).toHaveBeenCalledTimes(1);
   expect(fetch).toHaveBeenCalledWith(
     "https://sm-spring-api.herokuapp.com/users",
@@ -20,6 +36,7 @@ test("api call", async () => {
       body: JSON.stringify({ login: "admin", pass: "1234" }),
     }
   );
+  expect(loginStatus).toBe(true);
 });
 
 test("login success", () => {

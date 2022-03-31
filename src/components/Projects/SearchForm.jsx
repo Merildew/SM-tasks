@@ -5,7 +5,7 @@ import "./styles.css";
 
 export function SearchForm() {
   useEffect(() => {
-    getFetch("");
+    getProjects("").catch((error) => alert(error.message));
   }, []);
 
   const dispatch = useDispatch();
@@ -16,23 +16,28 @@ export function SearchForm() {
       clearTimeout(typing);
     }
     typing = setTimeout(() => {
-      getFetch(value);
+      getProjects(value).catch((error) => alert(error.message));
     }, 500);
   }
 
-  function getFetch(value) {
-    fetch("https://sm-spring-api.herokuapp.com/projects")
-      .then((res) => res.json())
-      .then((projects) => {
-        const result = projects.filter((item) => {
-          return (
-            item.title.toLowerCase().includes(value) ||
-            item.text.toLowerCase().includes(value)
-          );
-        });
-        dispatch(searchAction({ result: result, isLoaded: true }));
-      })
-      .catch((error) => console.log(error));
+  async function getProjects(value) {
+    const response = await fetch(
+      "https://sm-spring-api.herokuapp.com/projects"
+    );
+
+    if (!response.ok) {
+      const message = `An error has occured: ${response.status}`;
+      throw new Error(message);
+    }
+
+    const projects = await response.json();
+    const result = await projects.filter((item) => {
+      return (
+        item.title.toLowerCase().includes(value) ||
+        item.text.toLowerCase().includes(value)
+      );
+    });
+    dispatch(searchAction({ result: result, isLoaded: true }));
   }
 
   return (

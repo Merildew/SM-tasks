@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { search } from "../../redux/selectors";
+import { searchSelector } from "../../redux/selectors";
 import "./styles.css";
+import { useSelector } from "react-redux";
 
 function ProjectsItem(props) {
   return (
@@ -16,10 +17,10 @@ function ProjectsItem(props) {
 }
 
 export function ProjectsList() {
-  const result = search().result;
-  const isLoaded = search().isLoaded;
+  const { result } = useSelector(searchSelector);
+  const { isLoaded } = useSelector(searchSelector);
 
-  if (isLoaded === true) {
+  if (isLoaded) {
     if (result.length !== 0)
       return (
         <div className="container">

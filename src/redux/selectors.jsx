@@ -1,9 +1,3 @@
-import { useSelector } from "react-redux";
+export const userSelector = (store) => store.login;
 
-export function user() {
-  return useSelector((state) => state.login);
-}
-
-export function search() {
-  return useSelector((state) => state.search);
-}
+export const searchSelector = (store) => store.search;
