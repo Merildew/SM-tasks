@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { searchAction } from "../../redux/actions/searchActions";
 import "./styles.css";
+import { useNavigate } from "react-router-dom";
+import { getProjects } from "../../apiCalls/getProjects";
 
 export function SearchForm() {
-  useEffect(() => {
-    getProjects("").catch((error) => alert(error.message));
-  }, []);
-
+  const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getProjects("", navigate)).catch((error) => alert(error.message));
+  });
 
   let typing;
   function searchAsync(value) {
@@ -16,28 +18,8 @@ export function SearchForm() {
       clearTimeout(typing);
     }
     typing = setTimeout(() => {
-      getProjects(value).catch((error) => alert(error.message));
+      dispatch(getProjects(value, navigate));
     }, 500);
-  }
-
-  async function getProjects(value) {
-    const response = await fetch(
-      "https://sm-spring-api.herokuapp.com/projects"
-    );
-
-    if (!response.ok) {
-      const message = `An error has occured: ${response.status}`;
-      throw new Error(message);
-    }
-
-    const projects = await response.json();
-    const result = await projects.filter((item) => {
-      return (
-        item.title.toLowerCase().includes(value) ||
-        item.text.toLowerCase().includes(value)
-      );
-    });
-    dispatch(searchAction({ result: result, isLoaded: true }));
   }
 
   return (

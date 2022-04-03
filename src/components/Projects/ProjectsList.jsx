@@ -10,7 +10,7 @@ function ProjectsItem(props) {
       <img className="project-icon" src={props.src} alt=""></img>
       <div className="project-text-block">
         <h3>{props.title}</h3>
-        <p className="projects-text">{props.text}</p>
+        <p className="projects-text">{props.description}</p>
       </div>
     </a>
   );
@@ -30,7 +30,7 @@ export function ProjectsList() {
                 <ProjectsItem
                   src={item.src}
                   title={item.title}
-                  text={item.text}
+                  description={item.description}
                   key={item.title}
                 />
               );
@@ -55,5 +55,5 @@ export function ProjectsList() {
 ProjectsItem.propTypes = {
   src: PropTypes.string,
   title: PropTypes.string,
-  text: PropTypes.string,
+  description: PropTypes.string,
 };

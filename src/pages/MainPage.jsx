@@ -3,14 +3,13 @@ import { InfoSection } from "../components/InfoSection/InfoSection";
 import { Navigate } from "react-router-dom";
 import { SearchForm } from "../components/Projects/SearchForm";
 import { ProjectsList } from "../components/Projects/ProjectsList";
-import { useSelector } from "react-redux";
-import { userSelector } from "../redux/selectors";
+import { Header } from "../components/Header/Header";
 
 export function MainPage() {
-  const { isLogged } = useSelector(userSelector);
-  if (isLogged === true) {
+  if (localStorage.getItem("accessToken") !== undefined) {
     return (
       <>
+        <Header />
         <InfoSection
           title="Projects"
           text="From configuration to security, web apps to big data—whatever the

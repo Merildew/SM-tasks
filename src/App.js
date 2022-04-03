@@ -1,16 +1,16 @@
 import "./App.css";
 import React from "react";
-import { Header } from "./components/Header/Header";
-import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { LogInPage } from "./pages/LogInPage";
+import { SignUpPage } from "./pages/SignUpPage";
 import { Route, Routes } from "react-router-dom";
 import { MainPage } from "./pages/MainPage";
 
 function App() {
   return (
     <div className="wrapper">
-      <Header />
       <Routes>
-        <Route exact path="/login" element={<LoginPage />}></Route>
+        <Route exact path="/login" element={<LogInPage />}></Route>
+        <Route exact path="/signup" element={<SignUpPage />}></Route>
         <Route exact path="/" element={<MainPage />}></Route>
       </Routes>
     </div>
