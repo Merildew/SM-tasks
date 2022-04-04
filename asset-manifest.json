@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/SM-tasks/static/css/main.9fbab48c.css",
-    "main.js": "/SM-tasks/static/js/main.de215172.js",
+    "main.css": "/SM-tasks/static/css/main.af56ce22.css",
+    "main.js": "/SM-tasks/static/js/main.eaf5bb0d.js",
     "static/js/787.fbf6fb21.chunk.js": "/SM-tasks/static/js/787.fbf6fb21.chunk.js",
     "static/media/Metropolis-Regular.ttf": "/SM-tasks/static/media/Metropolis-Regular.3e96c38bc01555998420.ttf",
     "static/media/Metropolis-ExtraBold.ttf": "/SM-tasks/static/media/Metropolis-ExtraBold.7df160fef8980791a36b.ttf",
@@ -18,14 +18,15 @@
     "static/media/open-sans-v27-latin-regular.woff2": "/SM-tasks/static/media/open-sans-v27-latin-regular.a2d02404d087c7c068d4.woff2",
     "static/media/open-sans-v27-latin-700.woff2": "/SM-tasks/static/media/open-sans-v27-latin-700.166dc5efb248e5752096.woff2",
     "static/media/spring-logo.svg": "/SM-tasks/static/media/spring-logo.5e950eb412f3de03ef03279d74b24a04.svg",
+    "static/media/logout.svg": "/SM-tasks/static/media/logout.4210a5a3eea6be997bf98fc19bc39841.svg",
     "static/media/logo.svg": "/SM-tasks/static/media/logo.bce2f75cb2c37636c9f2.svg",
     "index.html": "/SM-tasks/index.html",
-    "main.9fbab48c.css.map": "/SM-tasks/static/css/main.9fbab48c.css.map",
-    "main.de215172.js.map": "/SM-tasks/static/js/main.de215172.js.map",
+    "main.af56ce22.css.map": "/SM-tasks/static/css/main.af56ce22.css.map",
+    "main.eaf5bb0d.js.map": "/SM-tasks/static/js/main.eaf5bb0d.js.map",
     "787.fbf6fb21.chunk.js.map": "/SM-tasks/static/js/787.fbf6fb21.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fbab48c.css",
-    "static/js/main.de215172.js"
+    "static/css/main.af56ce22.css",
+    "static/js/main.eaf5bb0d.js"
   ]
 }
