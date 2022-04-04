@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SM-tasks/static/css/main.af56ce22.css",
-    "main.js": "/SM-tasks/static/js/main.eaf5bb0d.js",
+    "main.js": "/SM-tasks/static/js/main.6a8900ea.js",
     "static/js/787.fbf6fb21.chunk.js": "/SM-tasks/static/js/787.fbf6fb21.chunk.js",
     "static/media/Metropolis-Regular.ttf": "/SM-tasks/static/media/Metropolis-Regular.3e96c38bc01555998420.ttf",
     "static/media/Metropolis-ExtraBold.ttf": "/SM-tasks/static/media/Metropolis-ExtraBold.7df160fef8980791a36b.ttf",
@@ -22,11 +22,11 @@
     "static/media/logo.svg": "/SM-tasks/static/media/logo.bce2f75cb2c37636c9f2.svg",
     "index.html": "/SM-tasks/index.html",
     "main.af56ce22.css.map": "/SM-tasks/static/css/main.af56ce22.css.map",
-    "main.eaf5bb0d.js.map": "/SM-tasks/static/js/main.eaf5bb0d.js.map",
+    "main.6a8900ea.js.map": "/SM-tasks/static/js/main.6a8900ea.js.map",
     "787.fbf6fb21.chunk.js.map": "/SM-tasks/static/js/787.fbf6fb21.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.af56ce22.css",
-    "static/js/main.eaf5bb0d.js"
+    "static/js/main.6a8900ea.js"
   ]
 }
