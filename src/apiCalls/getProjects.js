@@ -15,7 +15,7 @@ export function getProjects(value, navigate) {
     if (!response.ok) {
       if (response.status === 401) {
         const status = await refreshToken();
-        status ? getProjects(value) : navigate("/login");
+        status ? dispatch(getProjects(value, navigate)) : navigate("/login");
         return;
       }
       if (response.status === 403) {

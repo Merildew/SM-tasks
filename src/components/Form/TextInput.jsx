@@ -7,7 +7,6 @@ export function TextInput(props) {
       type="text"
       name={props.name}
       className="form-input"
-      value={props.login}
       onChange={props.onChangeInput}
     />
   );
@@ -15,6 +14,5 @@ export function TextInput(props) {
 
 TextInput.propTypes = {
   name: PropTypes.string,
-  login: PropTypes.string,
   onChangeInput: PropTypes.func,
 };
