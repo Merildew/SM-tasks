@@ -9,7 +9,7 @@ export function SearchForm() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getProjects("", navigate)).catch((error) => alert(error.message));
+    dispatch(getProjects("", navigate));
   });
 
   let typing;

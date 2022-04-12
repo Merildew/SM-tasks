@@ -22,45 +22,10 @@ export function SignUpPage() {
     }
   }
 
-  function changeLogin(event) {
+  function changeUser(event) {
     setUser(() => ({
       ...user,
-      ...{ login: event.target.value },
-    }));
-  }
-
-  function changePass(event) {
-    setUser(() => ({
-      ...user,
-      ...{ pass: event.target.value },
-    }));
-  }
-
-  function changeFirstName(event) {
-    setUser(() => ({
-      ...user,
-      ...{ firstName: event.target.value },
-    }));
-  }
-
-  function changeLastName(event) {
-    setUser(() => ({
-      ...user,
-      ...{ lastName: event.target.value },
-    }));
-  }
-
-  function changeAge(event) {
-    setUser(() => ({
-      ...user,
-      ...{ age: event.target.value },
-    }));
-  }
-
-  function changeCheckedPass(event) {
-    setUser(() => ({
-      ...user,
-      ...{ checkedPass: event.target.value },
+      [event.target.name]: event.target.value,
     }));
   }
 
@@ -75,66 +40,42 @@ export function SignUpPage() {
               <div className="errorMessage">{error.emptyFields}</div>
             )}
             Login
-            <TextInput
-              onChangeInput={changeLogin}
-              name="login"
-              value={user.login}
-            />
+            <TextInput onChangeInput={changeUser} name="login" />
             {error !== undefined && (
               <div className="errorMessage">{error.login}</div>
             )}
           </label>
           <label className="form-label">
             First name
-            <TextInput
-              onChangeInput={changeFirstName}
-              name="firstName"
-              value={user.firstName}
-            />
+            <TextInput onChangeInput={changeUser} name="firstName" />
             {error !== undefined && (
               <div className="errorMessage">{error.firstName}</div>
             )}
           </label>
           <label className="form-label">
             Last name
-            <TextInput
-              onChangeInput={changeLastName}
-              name="lastName"
-              value={user.lastName}
-            />
+            <TextInput onChangeInput={changeUser} name="lastName" />
             {error !== undefined && (
               <div className="errorMessage">{error.lastName}</div>
             )}
           </label>
           <label className="form-label">
             Age
-            <TextInput
-              onChangeInput={changeAge}
-              name="age"
-              value={user.login}
-            />
+            <TextInput onChangeInput={changeUser} name="age" />
             {error !== undefined && (
               <div className="errorMessage">{error.age}</div>
             )}
           </label>
           <label className="form-label">
             Password
-            <PassInput
-              onChangeInput={changePass}
-              name="pass"
-              value={user.pass}
-            />
+            <PassInput onChangeInput={changeUser} name="pass" />
             {error !== undefined && (
               <div className="errorMessage">{error.pass}</div>
             )}
           </label>
           <label className="form-label">
             Repeat password
-            <PassInput
-              onChangeInput={changeCheckedPass}
-              name="pass"
-              value={user.checkedPass}
-            />
+            <PassInput onChangeInput={changeUser} name="checkedPass" />
             {error !== undefined && (
               <div className="errorMessage">{error.checkedPass}</div>
             )}

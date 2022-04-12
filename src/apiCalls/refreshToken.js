@@ -7,8 +7,6 @@ export async function refreshToken() {
   };
   const response = await fetch("http://localhost:3001/token", options);
   if (!response.ok) {
-    const result = await response.json();
-    alert(result.error.message);
     return false;
   }
   const accessToken = await response.json();
