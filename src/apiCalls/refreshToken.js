@@ -1,15 +1,18 @@
+import axios from "axios";
+
 export async function refreshToken() {
   const refreshToken = localStorage.getItem("refreshToken");
-  const options = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ refreshToken: refreshToken }),
-  };
-  const response = await fetch("http://localhost:3001/token", options);
-  if (!response.ok) {
+  try {
+    const response = await axios({
+      url: "http://localhost:3001/token",
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      data: { refreshToken: refreshToken },
+    });
+    const accessToken = await response.data;
+    localStorage.setItem("accessToken", accessToken);
+    return true;
+  } catch (error) {
     return false;
   }
-  const accessToken = await response.json();
-  localStorage.setItem("accessToken", accessToken);
-  return true;
 }

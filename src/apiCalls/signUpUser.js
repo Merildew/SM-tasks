@@ -1,24 +1,27 @@
-export async function signUpUser(user, setError) {
-  const options = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      login: user.login,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      age: user.age,
-      pass: user.pass,
-      checkedPass: user.checkedPass,
-    }),
-  };
+import axios from "axios";
 
-  const response = await fetch("http://localhost:3001/signup", options);
-  if (!response.ok) {
-    let validationError = await response.json();
+export async function signUpUser(user, setError) {
+  try {
+    const response = await axios({
+      url: "http://localhost:3001/signup",
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      data: {
+        login: user.login,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        age: user.age,
+        pass: user.pass,
+        checkedPass: user.checkedPass,
+      },
+    });
+
+    const data = await response.data;
+    return data;
+  } catch (error) {
+    let validationError = await error.response.data;
     validationError = validationError.errors;
     setError(validationError);
     throw new Error(validationError.message);
   }
-  const data = await response.json();
-  return data;
 }
