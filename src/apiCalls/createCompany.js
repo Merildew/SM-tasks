@@ -1,8 +1,9 @@
 import axios from "axios";
+import { API_URL } from "./apiURL";
 
 export async function createCompany(company) {
   const response = await axios({
-    url: "http://localhost:3001/companies",
+    url: `${API_URL}/companies`,
     method: "POST",
     headers: { "Content-Type": "application/json" },
     data: company,

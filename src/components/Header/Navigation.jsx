@@ -33,17 +33,6 @@ export function Navigation() {
         <NavLinks headerLinks={HEADER_LINKS} classForNav="nav-list show" />
       )}
       <div className="nav-icons-wrapper">
-        <div id="hamburger" className="hamburger" onClick={onShow}>
-          <div
-            className={show ? "burger-bar burger-bar-1" : "burger-bar"}
-          ></div>
-          <div
-            className={show ? "burger-bar burger-bar-2" : "burger-bar"}
-          ></div>
-          <div
-            className={show ? "burger-bar burger-bar-3" : "burger-bar"}
-          ></div>
-        </div>
         <NavLink to="/companies">
           <img className="logout-image" src={companies} alt="" />
         </NavLink>
@@ -55,6 +44,17 @@ export function Navigation() {
         >
           <img className="logout-image" src={logout} alt="" />
         </NavLink>
+        <div id="hamburger" className="hamburger" onClick={onShow}>
+          <div
+            className={show ? "burger-bar burger-bar-1" : "burger-bar"}
+          ></div>
+          <div
+            className={show ? "burger-bar burger-bar-2" : "burger-bar"}
+          ></div>
+          <div
+            className={show ? "burger-bar burger-bar-3" : "burger-bar"}
+          ></div>
+        </div>
       </div>
     </nav>
   );

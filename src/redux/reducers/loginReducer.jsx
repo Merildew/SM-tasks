@@ -1,4 +1,4 @@
-import { SIGN_IN } from "../actions/loginActions";
+import { LOG_IN } from "../actions/loginActions";
 
 const initialState = {
   login: null,
@@ -7,7 +7,7 @@ const initialState = {
 
 export const loginReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SIGN_IN: {
+    case LOG_IN: {
       return {
         ...state,
         login: action.payload.login,

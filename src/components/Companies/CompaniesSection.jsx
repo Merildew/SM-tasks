@@ -5,14 +5,11 @@ import { NavLink } from "react-router-dom";
 import { CompaniesItem } from "./CompaniesItem";
 import "./styles.css";
 import { getCompanies } from "../../apiCalls/getCompanies";
-import { useDispatch } from "react-redux";
-
 export function CompaniesSection(props) {
   const [company, setCompany] = useState([]);
 
-  const dispatch = useDispatch();
   useEffect(async () => {
-    const companyResp = await dispatch(getCompanies());
+    const companyResp = await getCompanies();
     setCompany(companyResp);
   }, [setCompany]);
 
@@ -24,10 +21,11 @@ export function CompaniesSection(props) {
       </section>
       <div className="companies-container">
         <div className="companies-block-wrapper">
-          {company.map((item, index) => {
+          {company.map((item) => {
             return (
               <CompaniesItem
-                key={index}
+                key={item.id}
+                id={item.id}
                 title={item.name}
                 location={item.location}
                 number={item.phoneNumber}

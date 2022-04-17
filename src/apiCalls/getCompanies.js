@@ -1,16 +1,11 @@
 import axios from "axios";
+import { API_URL } from "./apiURL";
 
-import { companiesAction } from "../redux/actions/companiesActions";
-
-export function getCompanies() {
-  return async (dispatch) => {
-    const response = await axios({
-      method: "get",
-      url: `http://localhost:3001/companies`,
-    });
-    const data = await response.data;
-
-    dispatch(companiesAction({ companies: data }));
-    return data;
-  };
+export async function getCompanies() {
+  const response = await axios({
+    method: "get",
+    url: `${API_URL}/companies`,
+  });
+  const data = await response.data;
+  return data;
 }

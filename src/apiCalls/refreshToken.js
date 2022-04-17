@@ -1,10 +1,11 @@
 import axios from "axios";
+import { API_URL } from "./apiURL";
 
 export async function refreshToken() {
   const refreshToken = localStorage.getItem("refreshToken");
   try {
     const response = await axios({
-      url: "http://localhost:3001/token",
+      url: `${API_URL}/token`,
       method: "POST",
       headers: { "Content-Type": "application/json" },
       data: { refreshToken: refreshToken },

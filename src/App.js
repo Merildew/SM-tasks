@@ -20,7 +20,7 @@ function App() {
           element={<CreateCompanyPage />}
         ></Route>
         <Route exact path="/editpage" element={<EditPage />}>
-          <Route path=":name" element={<EditPage />} />
+          <Route path=":id" element={<EditPage />} />
         </Route>
         <Route exact path="/companies" element={<CompaniesPage />}></Route>
         <Route exact path="/" element={<MainPage />}></Route>

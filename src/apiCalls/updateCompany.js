@@ -1,9 +1,10 @@
 import axios from "axios";
+import { API_URL } from "./apiURL";
 
 export async function updateCompany(company) {
   const response = await axios({
-    url: "http://localhost:3001/companies",
-    method: "PUT",
+    url: `${API_URL}/companies`,
+    method: "PATCH",
     headers: { "Content-Type": "application/json" },
     data: company,
   });

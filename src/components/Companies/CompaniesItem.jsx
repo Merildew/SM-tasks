@@ -18,7 +18,7 @@ export function CompaniesItem(props) {
             <p className="company-text">Address: {props.address}</p>
           )}
         </div>
-        <NavLink to={`/editpage/${props.title}`}>
+        <NavLink to={`/editpage/${props.id}`}>
           <Button value="Edit" />
         </NavLink>
       </div>
@@ -41,6 +41,7 @@ export function CompaniesItem(props) {
 }
 
 CompaniesItem.propTypes = {
+  id: PropTypes.number,
   location: PropTypes.string,
   title: PropTypes.string,
   number: PropTypes.string,

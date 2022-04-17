@@ -1,9 +1,10 @@
 import axios from "axios";
+import { API_URL } from "./apiURL";
 
 export async function signUpUser(user, setError) {
   try {
     const response = await axios({
-      url: "http://localhost:3001/signup",
+      url: `${API_URL}/signup`,
       method: "POST",
       headers: { "Content-Type": "application/json" },
       data: {
