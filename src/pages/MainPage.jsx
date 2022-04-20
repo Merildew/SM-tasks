@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { InfoSection } from "../components/InfoSection/InfoSection";
 import { Navigate } from "react-router-dom";
 import { SearchForm } from "../components/Projects/SearchForm";

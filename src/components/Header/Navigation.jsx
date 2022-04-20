@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { HEADER_LINKS } from "../../constants/headerLinks";
 import { NavTitle } from "./NavTitle";
 import logout from "../../assets/images/logout.svg";
+import companies from "../../assets/images/companies.svg";
 import { NavLink } from "react-router-dom";
 
 function NavLinks(props) {
@@ -32,6 +33,17 @@ export function Navigation() {
         <NavLinks headerLinks={HEADER_LINKS} classForNav="nav-list show" />
       )}
       <div className="nav-icons-wrapper">
+        <NavLink to="/companies">
+          <img className="logout-image" src={companies} alt="" />
+        </NavLink>
+        <NavLink
+          to="/login"
+          onClick={() => {
+            localStorage.clear();
+          }}
+        >
+          <img className="logout-image" src={logout} alt="" />
+        </NavLink>
         <div id="hamburger" className="hamburger" onClick={onShow}>
           <div
             className={show ? "burger-bar burger-bar-1" : "burger-bar"}
@@ -43,14 +55,6 @@ export function Navigation() {
             className={show ? "burger-bar burger-bar-3" : "burger-bar"}
           ></div>
         </div>
-        <NavLink
-          to="/login"
-          onClick={() => {
-            localStorage.clear();
-          }}
-        >
-          <img className="logout-image" src={logout} alt="" />
-        </NavLink>
       </div>
     </nav>
   );

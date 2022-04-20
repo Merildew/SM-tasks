@@ -1,0 +1,70 @@
+.companies-info-section {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 80px 20px 0;
+  box-sizing: content-box;
+}
+
+.companies-section-text {
+  font-family: Metropolis, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+  margin: 24px 0 80px;
+  color: #333;
+}
+
+.companies-container {
+  background-color: #ebf2f2;
+  padding: 50px 20px;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+.company-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 25px;
+  border: 1px solid #d9e9e9;
+  border-radius: 5px;
+}
+
+.company-block .form-button {
+  width: 100px;
+  height: 40px;
+  margin: 0;
+}
+.company-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-text {
+  line-height: 1.7;
+  color: #333;
+  font-family: Open Sans, sans-serif;
+  margin: 16px 0;
+}
+
+.companies-block-wrapper {
+  max-width: 1140px;
+  margin: 0 auto 25px;
+}
+
+.employees-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 980px;
+}
+
+.employee-info {
+  margin: 8px 16px;
+  padding: 4px 12px;
+  background-color: #d9e9e9;
+  border-radius: 5px;
+}

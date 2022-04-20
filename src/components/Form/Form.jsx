@@ -12,6 +12,7 @@ export function Form(props) {
         >
           <h1 className="form-title">{props.title}</h1>
           {props.render}
+          {props.children}
         </form>
       </div>
     </div>
@@ -22,4 +23,5 @@ Form.propTypes = {
   onSubmitForm: PropTypes.func,
   title: PropTypes.string,
   render: PropTypes.object,
+  children: PropTypes.array,
 };

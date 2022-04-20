@@ -6,7 +6,7 @@ import { PassInput } from "../components/Form/PassInput";
 import { SubmitButton } from "../components/Form/SubmitButton";
 import { NavLink } from "react-router-dom";
 import { Form } from "../components/Form/Form";
-import { loginUser } from "../apiCalls/loginUser";
+import { logInAction } from "../redux/actions/loginActions";
 
 export function LogInPage() {
   const [login, setLogin] = useState("");
@@ -18,7 +18,7 @@ export function LogInPage() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    dispatch(loginUser(login, pass, setError, navigate)).catch((e) => {
+    dispatch(logInAction(login, pass, setError, navigate)).catch((e) => {
       console.log(e.message);
     });
   }

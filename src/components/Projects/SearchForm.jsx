@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
-import { getProjects } from "../../apiCalls/getProjects";
+import { searchAction } from "../../redux/actions/searchActions";
 
 export function SearchForm() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getProjects("", navigate));
+    dispatch(searchAction("", navigate));
   });
 
   let typing;
@@ -18,7 +18,7 @@ export function SearchForm() {
       clearTimeout(typing);
     }
     typing = setTimeout(() => {
-      dispatch(getProjects(value, navigate));
+      dispatch(searchAction(value, navigate));
     }, 500);
   }
 
